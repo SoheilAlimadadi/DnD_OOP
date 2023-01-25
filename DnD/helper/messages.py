@@ -5,13 +5,13 @@ from settings.settings import MenuButtons as MB
 
 class PasswordErrorMessages(StrEnum):
     '''Error messages regarding password'''
-    PASSWORD_GENERIC_ERROR: str = "Password is not acceptable\n"
-    PASSWORD_LENGTH_ERROR: str = "Password must be atleast 8 characters\n"
-    PASSWORD_LETTER_ERROR: str = "Password must have atleast 2 letters\n"
-    PASSWORD_SIGN_ERROR: str = "Password must have atleast 1 sign character\n"
-    PASSWORD_DIGIT_ERROR: str = "Password must have atleast 1 digit\n"
-    PASSWORD_UPPER_ERROR: str = "Password must have atleast 1 uppercase letter\n"
-    PASSWORD_LOWER_ERROR: str = "Password must have atleast 1 lowercase letter\n"
+    PASSWORD_GENERIC_ERROR: str = "Password is not acceptable"
+    PASSWORD_LENGTH_ERROR: str = "Password must be atleast 8 characters"
+    PASSWORD_LETTER_ERROR: str = "Password must have atleast 2 letters"
+    PASSWORD_SIGN_ERROR: str = "Password must have atleast 1 sign character"
+    PASSWORD_DIGIT_ERROR: str = "Password must have atleast 1 digit"
+    PASSWORD_UPPER_ERROR: str = "Password must have atleast 1 uppercase letter"
+    PASSWORD_LOWER_ERROR: str = "Password must have atleast 1 lowercase letter"
 
 
 class UsernameErrorMessages(StrEnum):
