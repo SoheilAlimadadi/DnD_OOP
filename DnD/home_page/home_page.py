@@ -61,9 +61,12 @@ class HomePage:
         username_valid: bool = False
         while not username_valid:
             Utils.print_logo()
-            username = Utils.get_username()
-            username_valid = self.validate_username(username)
-            if not username_valid:
+            username = input(HM.GET_USERNAME_TEXT)
+            if self.database.username_unique(username):
+                username_valid = self.validate_username(username)
+                if not username_valid:
+                    sleep(2)
+            else:
                 print(HM.USER_EXISTS.format(username))
                 sleep(2)
             Utils.clean()
@@ -72,11 +75,11 @@ class HomePage:
         while not password == repeat_password:
             if password is False:
                 Utils.print_logo()
-            password = Utils.get_password()
+            password = input(HM.GET_PASSWORD_TEXT)
             password_valid = self.validate_password(password)
             if not password_valid:
                 continue
-            repeat_password = Utils.repeat_password()
+            repeat_password = input(HM.GET_REPEAT_PASSWORD)
             if not password == repeat_password:
                 print(HM.PWS_DONT_MATCH)
                 sleep(2)
@@ -86,7 +89,7 @@ class HomePage:
         self.database.register(username, password)
 
 
-    def login_user(self) -> bool:
+    def login_user(self) -> tuple[str, bool]:
         '''Logs in the user'''
         logged_in: bool = False
         while not logged_in:
@@ -127,8 +130,7 @@ class HomePage:
 
     def validate_username(self, username: str) -> bool:
         '''Calls for username validation'''
-        if self.database.username_unique(username):
-            return UsernameAuth.check_user(username)
+        return UsernameAuth.check_user(username)
 
     
     def validate_password(self, password: str) -> bool:
