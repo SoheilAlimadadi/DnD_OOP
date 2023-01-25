@@ -1,6 +1,7 @@
 import logging
 import logging.config
 from sys import exit
+from typing import Callable
 
 from home_page.home_page import HomePage
 from menu.make_menu import Menu
@@ -40,7 +41,7 @@ class DungeonAndDragons:
         self.game_board = GameBoard()
 
 
-    def run_menu(self,username=None) -> None:
+    def run_menu(self,username=None) -> Callable:
         '''
         runs the homepage and menu
         '''
@@ -60,10 +61,11 @@ class DungeonAndDragons:
                 continue
         
         root_logger.info(LG.STARTED_GAME.format(username))
-        self.run_game(username)
+
+        return self.run_game(username)
 
 
-    def run_game(self, username: str) -> None:
+    def run_game(self, username: str) -> Callable:
         '''
         setting up the objects needed in the game
         running the main loop of the game
@@ -109,7 +111,8 @@ class DungeonAndDragons:
                 game_end = True
         if result:
             database.update_database(result, username)
-        self.run_menu(username)
+
+        return self.run_menu(username)
 
 
     def print_info(self, valid_inputs: list[str], hp: list[str]) -> None:
