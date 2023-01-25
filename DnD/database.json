@@ -1,0 +1,32 @@
+{
+    "players": {
+        "soheil": {
+            "password": "6485f6ad96b0e59df96291190832e44286442a8dd17ce49236d6ac016cb178c7480af3da637e9f2af3938c3ff8b80893932935c6d0c22dbbd1b25ccb6a2553d6",
+            "salt": "6485f6ad96b0e59df96291190832e44286442a8dd17ce49236d6ac016cb178c7",
+            "won": 3,
+            "lost": 6,
+            "win ratio": 33.33333333333333
+        },
+        "reza": {
+            "password": "a5322dd57b553816e5efb7dcf1094a06ee8ab005ce4084bbc45ba22bb874e6c831261defd3f92e6afffc18fb6d693ceccb69d4eee2cd1e33792f833ecf2178d2",
+            "salt": "a5322dd57b553816e5efb7dcf1094a06ee8ab005ce4084bbc45ba22bb874e6c8",
+            "won": 0,
+            "lost": 2,
+            "win ratio": 0.0
+        },
+        "matin": {
+            "password": "cd9e40772cc32d0a9c4d1de9f92cd910eae6153c3b91ef244a5f94254ceebd9b4ddf87ca106c438f5a62c03f73a396bdd082a60491c961571c90dd76ac8e2687",
+            "salt": "cd9e40772cc32d0a9c4d1de9f92cd910eae6153c3b91ef244a5f94254ceebd9b",
+            "won": 0,
+            "lost": 0,
+            "win ratio": 0
+        },
+        "soheil1": {
+            "password": "150c891ea4bc698f0bcdcf133934694467276bc4e6f3709a8cb03ae94aaae80ded58b906e599afc34da72375e5bc0f5f0c45508cf5dd26ecf9339971c671ed2a",
+            "salt": "150c891ea4bc698f0bcdcf133934694467276bc4e6f3709a8cb03ae94aaae80d",
+            "won": 1,
+            "lost": 1,
+            "win ratio": 50.0
+        }
+    }
+}
