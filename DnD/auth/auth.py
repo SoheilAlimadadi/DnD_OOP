@@ -29,22 +29,22 @@ class PasswordAuth:
         try:
             Password(password)
         except PasswordLengthError as e:
-            auth_logger.info(e[:-1])
+            auth_logger.info(e)
             print(e)
         except PasswordLetterError as e:
-            auth_logger.info(e[:-1])
+            auth_logger.info(e)
             print(e)
         except PasswordDigitError as e:
-            auth_logger.info(e[:-1])
+            auth_logger.info(e)
             print(e)
         except PasswordSignError as e:
-            auth_logger.info(e[:-1])
+            auth_logger.info(e)
             print(e)
         except PasswordLowerCaseError as e:
-            auth_logger.info(e[:-1])
+            auth_logger.info(e)
             print(e)
         except PasswordUpperCaseError as e:
-            auth_logger.info(e[:-1])
+            auth_logger.info(e)
             print(e)
         else:
             password_valid = True
@@ -68,7 +68,7 @@ class UsernameAuth:
             Username(username)
         except UsernameLengthError as e:
             auth_logger.info(LG.FAILED_USERNAME_REGISTER.format(username))
-            print(e[:-1])
+            print(e)
         else:
             auth_logger.info(LG.USERNAME_REGISTER.format(username))
             username_valid = True
