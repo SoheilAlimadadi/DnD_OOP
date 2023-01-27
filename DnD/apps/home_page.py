@@ -1,6 +1,6 @@
 from typing import Optional
 from logging import getLogger
-from time  import sleep
+from time import sleep
 
 from database.database import DataBase
 from helper.messages import HomepageMessages as HM
@@ -16,7 +16,10 @@ auth_logger = getLogger('auth')
 
 
 class HomePage:
-    '''The homepage of the game'''
+    """
+    The homepage of the game
+    user can register, login and quit here
+    """
     def __init__(self) -> None:
         self.database = DataBase()
         self.texts: list[str] = [HM.LOGIN_TEXT, HM.REGISTER_TEXT, HM.QUIT_TEXT]
@@ -28,7 +31,7 @@ class HomePage:
 
 
     def make_home_page(self) -> tuple[str, bool]:
-        '''Creates the homepage'''
+        """Creates the homepage"""
         self.make_initial_database()
         quit_game: bool = False
         home_page: bool = True
@@ -38,7 +41,7 @@ class HomePage:
             Utils.print_logo()
             for text in self.texts:
                 print(text)
-            
+
             user_input = input().lower().strip()
             Utils.clean()
 
@@ -48,16 +51,17 @@ class HomePage:
                 self.register_user()
             if user_input == HB.LOGIN_BUTTON:
                 username, logged_in = self.login_user()
-                if not logged_in: continue
-            
+                if not logged_in:
+                    continue
+
                 home_page = False
 
-            
+
         return username, quit_game
 
 
     def register_user(self) -> None:
-        '''Registers the user'''
+        """Registers the user"""
         username_valid: bool = False
         while not username_valid:
             Utils.print_logo()
@@ -90,20 +94,23 @@ class HomePage:
 
 
     def login_user(self) -> tuple[str, bool]:
-        '''Logs in the user'''
+        """Logs in the user
+
+        returns tuple[str, bool]: username and whether user is logged in or not
+        """
         logged_in: bool = False
         while not logged_in:
             Utils.clean()
             Utils.print_logo()
             print(HM.QUIT_LOGIN)
-            username = Utils.get_username()
+            username = input(HM.GET_USERNAME_TEXT)
             if username.lower() == HB.LOGIN_BACK:
                 break
             if not self.database.is_username_in_database(username):
                 print(HM.USERNAME_NOT_FOUND.format(username))
                 Utils.wait_clean()
                 continue
-            password = Utils.get_password()
+            password = input(HM.GET_PASSWORD_TEXT)
             if password.lower() == HB.LOGIN_BACK:
                 break
             Utils.clean()
@@ -123,16 +130,36 @@ class HomePage:
 
 
     def make_initial_database(self) -> None:
-        '''Makes the initial database'''
+        """Makes the initial database"""
         if not self.database.database_exists():
             self.database.create_database()
 
 
     def validate_username(self, username: str) -> bool:
-        '''Calls for username validation'''
+        """Calls for username validation
+
+        Parameters
+        ----------
+        username: str : username
+
+
+        Returns bool: True if username is valid else False
+        -------
+
+        """
         return UsernameAuth.check_user(username)
 
-    
+
     def validate_password(self, password: str) -> bool:
-        '''Calls for password validation'''
+        """Calls for password validation
+
+        Parameters
+        ----------
+        password: str : password
+
+
+        Returns bool: True if password is valid else False
+        -------
+
+        """
         return PasswordAuth.check_pass(password)

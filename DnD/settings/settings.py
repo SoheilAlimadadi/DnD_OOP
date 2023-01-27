@@ -39,8 +39,8 @@ class GameBoardElements(StrEnum):
 
 
 class GameBoardSize(Enum):
-    MAP_WIDTH: int = 15
-    MAP_HEIGHT: int = 15
+    MAP_WIDTH: int = 17
+    MAP_HEIGHT: int = 17
 
 
 class GameMechanicElemenets(StrEnum):
@@ -59,6 +59,27 @@ class PlayerSettings(StrEnum):
     PLAYER: str = '😎'
     HEALTH: str = '💜'
     HEALTH_NUM: str = '3'
+    SHOTS: str = '🔥'
+
+
+class ShootValidInputs(StrEnum):
+    UP = 'shoot up'
+    DOWN = 'shoot down'
+    RIGHT = 'shoot right'
+    LEFT = 'shoot left'
+
+
+class PlayerShootSettings(Enum):
+    SHOTS_NUM = 3
+    UP = 'shoot up'
+    DOWN = 'shoot down'
+    RIGHT = 'shoot right'
+    LEFT = 'shoot left'
+    UP_DIR = ((0, -1), (0, -2))
+    DOWN_DIR = ((0, 1), (0, 2))
+    RIGHT_DIR = ((1, 0), (2, 0))
+    LEFT_DIR = ((-1, 0), (-2, 0))
+
 
 
 class DungeonDoorSettings(StrEnum):

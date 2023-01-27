@@ -1,4 +1,8 @@
-from random import randint
+from math import dist
+from random import (
+    randint,
+    choice
+)
 
 from settings.settings import (
     MonsterSettings as MS,
@@ -9,9 +13,7 @@ from game_mechanics.movement import Movement
 
 
 class BaseMonster(Movement):
-    """
-    Base monster class
-    """
+    """Base monster class"""
     def __init__(self, game_board: list[list[str]]) -> None:
         self.string: str = MS.MONSTER_STR
         self.emoji: str = MS.MONSTER
@@ -23,6 +25,7 @@ class BaseMonster(Movement):
 
     
     def random_xy(self) -> tuple[int, int]:
+        """ """
         random_coord_valid = False
         while not random_coord_valid:
             x = randint(2, GBS.MAP_WIDTH.value - 2)
@@ -34,6 +37,23 @@ class BaseMonster(Movement):
                 coord = (x, y)
 
         return coord
+
+
+    def move_if_smell(self, player_coord: tuple[int, int]) -> None:
+        """
+
+        Parameters
+        ----------
+        player_coord: tuple[int, int] : cooordinate of the player
+            
+        
+        Returns None
+        -------
+
+        """
+        if dist(self.coord, player_coord) < 5:
+            direction = choice(list(self.movements.keys()))
+            self.move(direction)
 
 
     def __str__(self) -> str:

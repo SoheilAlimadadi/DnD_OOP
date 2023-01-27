@@ -8,9 +8,7 @@ from helper.utils import Utils
 
 
 class Leaderboard:
-    """
-    Leaderboard showing games won, games lost and win ratio of each user
-    """
+    """Leaderboard showing games won, games lost and win ratio of each user"""
     def __init__(self) -> None:
         self.database = DataBase()
         self.name: str = LBV.NAME
@@ -30,7 +28,7 @@ class Leaderboard:
         players_stats = list()
         for name, stats in database[self.database.players].items():
             player = dict()
-            player.setdefault(self.name , name)
+            player.setdefault(self.name, name)
             for stat, value in stats.items():
                 if stat == self.database.games_won:
                     player.setdefault(self.won, value)

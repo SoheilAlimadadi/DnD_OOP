@@ -1,11 +1,17 @@
-from settings.settings import GameBoardElements as GBE
-from settings.settings import GameBoardSize as GBS
+from logging import getLogger
+
+from settings.settings import (
+    GameBoardElements as GBE,
+    GameBoardSize as GBS
+)
+from helper.messages import LogMessages as LM
+
+
+game_logger = getLogger('game')
 
 
 class GameBoard:
-    """
-    Class for the gameboard of the game
-    """
+    """Class for the gameboard of the game"""
 
     def __init__(self) -> None:
         self.row_len: str = GBS.MAP_WIDTH.value
@@ -15,7 +21,10 @@ class GameBoard:
 
 
     def make_board(self) -> list[list[str]]:
-        """Creates the gameboard"""
+        """Creates the gameboard
+
+           returns list[list[str]]: game board         
+        """
         game_map = [self.walls * self.row_len 
                     if col == 0 or col == (self.col_len - 1)
                     else [self.walls if row == 0 or row == (self.row_len - 1)
@@ -41,22 +50,62 @@ class GameBoard:
         coord: tuple[int, int],
         obj: str
     ) -> tuple[int, int]:
-        """Draws objects onto the gameboard"""
-        xpos, ypos = coord
-        board[xpos][ypos] = obj
+        """Draws objects onto the gameboard
+
+        Parameters
+        ----------
+        board: list[list[str]] : game board
+            
+        coord: tuple[int, int] : coordinate of the object
+            
+        obj: str : the object
+            
+
+        Returns tuple[int, int]: coord of the object
+        -------
+
+        """
+        try:
+            xpos, ypos = coord
+            board[xpos][ypos] = obj
+        except TypeError:
+            game_logger.info(LM.SHOT_WALL_TYPEERROR)
+        except IndexError:
+            game_logger.info(LM.SHOT_WALL_INDEXERROR)
 
         return coord
 
 
     @staticmethod
-    def delete(board, coord: tuple[int, int]) -> None:
-        """Deletes objects from the gameboard"""
+    def delete(board: list[list[str]], coord: tuple[int, int]) -> None:
+        """Deletes objects from the gameboard
+
+        Parameters
+        ----------
+        board: list[list[str]]: game board
+            
+        coord: tuple[int, int] : coordinate of the object
+            
+        Returns None
+        -------
+
+        """
         xpos, ypos = coord
         board[xpos][ypos] = GBE.MAP_TILES
 
 
     @staticmethod
     def draw_game_board(board: list[list[str]]) -> None:
-        """Draws the gameboard"""
+        """Draws the gameboard
+
+        Parameters
+        ----------
+        board: list[list[str]] : game board
+            
+
+        Returns None
+        -------
+
+        """
         for row in board:
             print(''.join(row))

@@ -10,23 +10,30 @@ from helper.exceptions import (
 
 
 class Password:
-    '''
-    setting the password
-    '''
+    """setting the password"""
     def __init__(self, password: str) -> None:
         self.password: str = password
 
     @property
     def password(self) -> str:
+        """get password"""
         return self._password
 
 
     @password.setter
     def password(self, value: str) -> None:
-        '''
-        checks if password is valid,
+        """checks if password is valid,
         if password is not valid, exceptions are raised
-        '''
+
+        Parameters
+        ----------
+        value: str : password
+
+
+        Returns None
+        -------
+
+        """
         password_validator = PasswordValidator(value)
         if not password_validator.check_len():
             raise PasswordLengthError

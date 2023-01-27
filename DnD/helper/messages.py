@@ -71,6 +71,7 @@ class GameMessages(StrEnum):
     MOVEMENTS: str = "Enter {} to move"
     BACK: str = "Enter {} to go back to menu"
     MOVE: str = "Move: "
+    SHOOT: str = "Enter {} to shoot"
 
 
 class GameResultMessages(StrEnum):
@@ -107,4 +108,6 @@ class LogMessages(StrEnum):
     REGISTERED = "{} registered"
     RESULT = "{} {} the game"
     EXIT_GAME = "{} came out of the game before finishing the game"
+    SHOT_WALL_TYPEERROR = "Player shot at top or bottom wall of the map TypeError"
+    SHOT_WALL_INDEXERROR = "Player shot at top or bottom wall of the map IndexError"
     

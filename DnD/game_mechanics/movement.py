@@ -6,6 +6,7 @@ from settings.settings import (
 
 
 class Movement(Axis):
+    """Extends the Axis class with movement ability"""
 
     movements: dict[str, tuple[int, int]] = {
         MS.UP_INPUT.value: MS.UP.value,
@@ -24,6 +25,17 @@ class Movement(Axis):
 
 
     def move(self, user_input: str) -> None:
+        """
+
+        Parameters
+        ----------
+        user_input: str : user input
+            
+
+        Returns None
+        -------
+
+        """
         x, y = self.coord
         if user_input:
             x_move, y_move = self.movements[user_input]
@@ -37,7 +49,19 @@ class Movement(Axis):
         coord: tuple[int, int] ,
         gameboard: list[list[str]]
     ) -> bool:
-        '''Checks whether the object has colided with wall'''
+        """Checks whether the object has colided with wall
+
+        Parameters
+        ----------
+        coord: tuple[int, int]: coordinate of object
+
+        gameboard: list[list[str]] : game board
+            
+
+        Returns bool: True if valid else False
+        -------
+
+        """
         valid_pos: bool = False
         if coord:
             x, y = coord
@@ -53,6 +77,6 @@ class Movement(Axis):
 
 
     @coord.setter
-    def coord(self, value) -> None:
+    def coord(self, value: tuple[int, int]) -> None:
         if self.check_wall_collision(value, self.game_board):
             self._coord = value

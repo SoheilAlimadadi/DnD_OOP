@@ -21,20 +21,6 @@ class Utils:
         sleep(2)
         Utils.clean()
     
-    @staticmethod
-    def get_username() -> str:
-        return input(HB.GET_USERNAME_TEXT)
-
-
-    @staticmethod
-    def get_password() -> str:
-        return input(HB.GET_PASSWORD_TEXT)
-
-    
-    @staticmethod
-    def repeat_password() -> str:
-        return input(HB.GET_REPEAT_PASSWORD)
-
 
     @staticmethod
     def print_logo() -> None:

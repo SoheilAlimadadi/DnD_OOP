@@ -1,79 +1,52 @@
-2023-01-19 10:31:52,037 :: Password must be atleast 8 characters
-2023-01-19 10:39:05,924 :: User failed to register with 'so' due to UsernameLengthError
-2023-01-19 10:39:08,681 :: User failed to register with 'oh' due to UsernameLengthError
-2023-01-19 10:48:13,487 :: reza is attempting to register with a valid username
-2023-01-19 10:48:27,310 :: reza registered
-2023-01-19 10:48:38,104 :: reza Logged in
-2023-01-19 10:58:27,598 :: reza Logged in
-2023-01-19 10:59:36,920 :: reza Logged in
-2023-01-19 11:01:16,049 :: reza Logged in
-2023-01-19 11:39:08,109 :: matin is attempting to register with a valid username
-2023-01-19 11:39:39,573 :: matin is attempting to register with a valid username
-2023-01-19 11:40:53,220 :: matin is attempting to register with a valid username
-2023-01-19 11:41:11,514 :: matin registered
-2023-01-19 11:41:18,524 :: matin Logged in
-2023-01-19 11:44:33,792 :: matin12 is attempting to register with a valid username
-2023-01-19 11:55:12,412 :: soheil Logged in
-2023-01-19 12:06:39,424 :: soheil Logged in
-2023-01-19 12:09:18,872 :: soheil1 is attempting to register with a valid username
-2023-01-19 12:09:23,247 :: Password must be atleast 8 characters
-2023-01-19 12:10:57,292 :: soheil1 is attempting to register with a valid username
-2023-01-19 12:11:00,657 :: Password must be atleast 8 characters
-2023-01-19 12:12:38,661 :: soheil1 is attempting to register with a valid username
-2023-01-19 12:12:42,424 :: Password must be atleast 8 characters
+2023-01-25 20:20:23,420 :: soheil Logged in
+2023-01-25 20:22:52,259 :: soheil Logged in
+2023-01-25 22:14:38,302 :: soheil Logged in
+2023-01-25 23:15:49,454 :: soheil Logged in
+2023-01-25 23:16:49,127 :: soheil Logged in
+2023-01-25 23:48:27,775 :: soheil Logged in
+2023-01-25 23:51:35,156 :: soheil Logged in
+2023-01-25 23:52:44,296 :: soheil Logged in
+2023-01-26 15:03:59,043 :: soheil Logged in
+2023-01-27 09:27:52,910 :: User failed to register with 'beh' due to UsernameLengthError
 
-2023-01-19 12:12:45,684 :: Password must be atleast 8 characters
-
-2023-01-19 12:12:47,468 :: Password must be atleast 8 characters
-
-2023-01-19 12:12:48,673 :: Password must be atleast 8 characters
-
-2023-01-19 12:12:49,736 :: Password must be atleast 8 characters
-
-2023-01-19 12:12:50,919 :: Password must be atleast 8 characters
-
-2023-01-19 12:12:52,111 :: Password must be atleast 8 characters
-
-2023-01-19 12:13:01,915 :: soheil1 registered
-2023-01-19 12:13:30,605 :: soheil Logged in
-2023-01-19 12:14:40,219 :: soheil1 Logged in
-2023-01-19 12:15:53,573 :: soheil Logged in
-2023-01-19 12:16:42,638 :: soheil Logged in
-2023-01-19 12:19:11,986 :: soheil1 Logged in
-2023-01-19 12:46:45,862 :: reza Logged in
-2023-01-19 12:47:42,057 :: reza Logged in
-2023-01-19 12:50:20,133 :: reza Logged in
-2023-01-19 12:51:50,827 :: reza Logged in
-2023-01-19 12:54:06,668 :: reza Logged in
-2023-01-19 14:10:56,508 :: reza Logged in
-2023-01-22 13:39:59,768 :: soheil Logged in
-2023-01-25 13:13:25,308 :: soheil Logged in
-2023-01-25 13:14:59,939 :: soheil Logged in
-2023-01-25 13:15:34,718 :: soheil Logged in
-2023-01-25 13:17:48,963 :: soheil Logged in
-2023-01-25 13:19:59,476 :: soheil Logged in
-2023-01-25 13:21:22,219 :: soheil Logged in
-2023-01-25 13:22:18,409 :: soheil Logged in
-2023-01-25 13:22:51,066 :: soheil Logged in
-2023-01-25 13:23:27,735 :: soheil Logged in
-2023-01-25 13:31:13,908 :: soheil Logged in
-2023-01-25 13:35:54,536 :: soheil Logged in
-2023-01-25 13:36:33,996 :: soheil Logged in
-2023-01-25 13:38:16,614 :: soheil Logged in
-2023-01-25 13:40:55,259 :: soheil Logged in
-2023-01-25 13:43:20,146 :: soheil Logged in
-2023-01-25 13:44:04,906 :: soheil Logged in
-2023-01-25 13:46:16,699 :: soheil Logged in
-2023-01-25 13:52:25,549 :: soheil Logged in
-2023-01-25 13:53:00,375 :: soheil Logged in
-2023-01-25 13:57:34,675 :: soheil Logged in
-2023-01-25 14:01:00,523 :: soheil Logged in
-2023-01-25 14:31:10,424 :: soheil Logged in
-2023-01-25 14:31:55,644 :: soheil Logged in
-2023-01-25 14:32:15,376 :: soheil Logged in
-2023-01-25 14:33:29,458 :: soheil Logged in
-2023-01-25 14:37:48,528 :: soheil Logged in
-2023-01-25 14:39:01,428 :: soheil Logged in
-2023-01-25 14:40:16,838 :: soheil Logged in
-2023-01-25 17:36:38,709 :: soheil Logged in
-2023-01-25 19:38:04,980 :: soheil Logged in
+2023-01-27 09:28:04,173 :: behdad is attempting to register with a valid username
+2023-01-27 09:28:05,829 :: Password must be atleast 8 characters
+2023-01-27 09:28:09,035 :: Password must be atleast 8 characters
+2023-01-27 09:28:12,504 :: Password must have atleast 1 sign character
+2023-01-27 09:28:33,693 :: behdad registered
+2023-01-27 09:28:40,519 :: behdad Logged in
+2023-01-27 10:13:12,256 :: soheil Logged in
+2023-01-27 10:17:08,697 :: soheil Logged in
+2023-01-27 10:17:58,265 :: soheil Logged in
+2023-01-27 10:21:32,861 :: soheil Logged in
+2023-01-27 10:22:07,755 :: soheil Logged in
+2023-01-27 10:29:50,768 :: soheil Logged in
+2023-01-27 10:36:04,413 :: soheil Logged in
+2023-01-27 10:39:30,103 :: soheil Logged in
+2023-01-27 10:40:29,159 :: soheil Logged in
+2023-01-27 10:50:55,567 :: soheil Logged in
+2023-01-27 10:53:07,110 :: soheil Logged in
+2023-01-27 10:57:34,472 :: soheil Logged in
+2023-01-27 10:59:09,997 :: soheil Logged in
+2023-01-27 10:59:43,637 :: soheil Logged in
+2023-01-27 11:03:45,723 :: soheil Logged in
+2023-01-27 11:24:23,637 :: soheil Logged in
+2023-01-27 11:27:41,338 :: soheil Logged in
+2023-01-27 11:31:44,129 :: soheil Logged in
+2023-01-27 11:34:57,829 :: soheil Logged in
+2023-01-27 11:37:57,923 :: soheil Logged in
+2023-01-27 11:40:55,787 :: soheil Logged in
+2023-01-27 11:41:28,204 :: soheil Logged in
+2023-01-27 11:51:32,016 :: soheil Logged in
+2023-01-27 11:53:01,366 :: soheil Logged in
+2023-01-27 11:57:46,934 :: soheil Logged in
+2023-01-27 11:59:45,940 :: soheil Logged in
+2023-01-27 12:03:39,748 :: soheil Logged in
+2023-01-27 12:05:35,258 :: soheil Logged in
+2023-01-27 12:09:06,932 :: soheil Logged in
+2023-01-27 12:09:39,917 :: soheil Logged in
+2023-01-27 12:58:43,551 :: soheil Logged in
+2023-01-27 13:13:12,718 :: soheil Logged in
+2023-01-27 14:21:22,471 :: ahmad is attempting to register with a valid username
+2023-01-27 14:21:29,865 :: ahmad registered
+2023-01-27 14:21:35,189 :: ahmad Logged in

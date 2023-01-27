@@ -1,6 +1,9 @@
-from .messages import PasswordErrorMessages as pass_esmg
-from .messages import UsernameErrorMessages as user_esmg
-from .messages import AxisErrorMessages as axis_emsg
+from .messages import (
+    PasswordErrorMessages as pass_esmg,
+    UsernameErrorMessages as user_esmg,
+    AxisErrorMessages as axis_emsg,
+    LogMessages as LM
+)
 from settings.settings import GameMechanicElemenets as GME
 
 
@@ -73,3 +76,14 @@ class YAxisNegativeError(ValueError):
     '''Negative value was assigned to Y'''
     def __str__(self) -> str:
         return axis_emsg.VALUE_NEGATIVE.format(GME.Y)
+
+
+class ShotAtHorizontalWallTypeError(TypeError):
+    """Player shot at top or bottom wall of the map TypeError"""
+    def __str__(self) -> str:
+        return LM.SHOT_WALL_TYPEERROR
+
+class ShotAtHorizontalWallIndexError(IndexError):
+    """Player shot at top or bottom wall of the map IndexError"""
+    def __str__(self) -> str:
+        return LM.SHOT_WALL_INDEXERROR

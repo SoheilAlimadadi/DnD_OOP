@@ -1,4 +1,5 @@
 from logging import getLogger
+
 from .password import Password
 from .username import Username
 from helper.messages import LogMessages as LG
@@ -61,6 +62,8 @@ class UsernameAuth:
     def check_user(username: str) -> bool:
         '''
         Check password validation
+
+        returns bool: True if username is valid else False
         '''
 
         username_valid: bool = False

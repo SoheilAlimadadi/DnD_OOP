@@ -13,9 +13,7 @@ auth_logger = getLogger('auth')
 
 
 class DataBase:
-    """
-    A Database class that contains methods to create and use it
-    """
+    """A Database class that contains methods to create and use it"""
     def __init__(self):
         self.database_name: str = DV.DATABASE_NAME
         self.players: str = DV.PLAYERS
@@ -47,7 +45,19 @@ class DataBase:
 
 
     def register(self, username: str, password: str) -> None:
-        """Registers the user info to the database"""
+        """Registers the user info to the database
+
+        Parameters
+        ----------
+        username: str : username
+            
+        password: str : password
+            
+
+        Returns None
+        -------
+
+        """
         database = self.read_database()
         database[self.players].setdefault(username, dict())
         salt, hashed_password = Hash.password(password)
@@ -65,7 +75,19 @@ class DataBase:
 
 
     def check_username_password(self, username: str, pw: str) -> bool:
-        """Checks whether the username and password from user, match"""
+        """Checks whether the username and password from user, match
+
+        Parameters
+        ----------
+        username: str : username
+            
+        pw: str : password
+            
+
+        Returns bool: True if the password in database matches the input pass
+        -------
+
+        """
         password_matches: bool = False
         database = self.read_database()
         password = database[self.players][username][self.password]
@@ -78,7 +100,17 @@ class DataBase:
 
 
     def username_unique(self, username: str) -> bool:
-        """Checks whether username is unique"""
+        """Checks whether username is unique
+
+        Parameters
+        ----------
+        username: str : username
+            
+
+        Returns bool: True if username is not in database else False
+        -------
+
+        """
         username_valid: bool = False
         database = self.read_database()
 
@@ -89,7 +121,17 @@ class DataBase:
 
 
     def is_username_in_database(self, username: str) -> bool:
-        """Checks whether username is in database"""
+        """Checks whether username is in database
+
+        Parameters
+        ----------
+        username: str : username
+            
+
+        Returns bool: True if username is in database else false
+        -------
+
+        """
         username_in_db: bool = False
         database = self.read_database()
         if username in database[self.players]:
@@ -99,14 +141,25 @@ class DataBase:
 
     
     def read_database(self) -> dict[str, Any]:
+        """Read the database"""
         with open(self.database_name, self.read) as database_object:
             database = json.load(database_object)
 
         return database
 
 
-    def write_to_database(self, data) -> None:
-        """Writes to database"""
+    def write_to_database(self, data: dict) -> None:
+        """Writes to database
+
+        Parameters
+        ----------
+        data : dict: data that is being written to database
+            
+
+        Returns None
+        -------
+
+        """
         with open(self.database_name, self.write) as file_obj:
             json_data = json.dumps(data, indent=4)
             file_obj.write(json_data)
@@ -114,7 +167,19 @@ class DataBase:
 
 
     def update_database(self, game_result: str, username: str) -> None:
-        """Updates the database after user wins or loses"""
+        """Updates the database after user wins or loses
+
+        Parameters
+        ----------
+        game_result: str : result of the game
+            
+        username: str : username
+            
+
+        Returns None
+        -------
+
+        """
         database = self.read_database()
         database[self.players][username][game_result] += 1
 

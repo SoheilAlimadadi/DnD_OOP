@@ -1,5 +1,6 @@
 from random import randint
 
+from helper.types import Coordinate
 from settings.settings import (
     DungeonDoorSettings as DDS,
     GameBoardSize as GBS,
@@ -9,7 +10,8 @@ from settings.settings import (
 
 class Door:
     """
-    Dungeon door class
+    a class with dungeon door info
+    and generates a semi-random location for it
     """
 
     def __init__(self, game_board: list[list[str]]) -> None:
@@ -19,7 +21,12 @@ class Door:
         self.coord = self.random_coord()
 
 
-    def random_coord(self) -> tuple[int, int]:
+    def random_coord(self) -> Coordinate:
+        """
+        Generates a semi-random location for the dungeon door
+
+        returns Coordinate: the dungeon door coord
+        """
         coord_valid = False
         while not coord_valid:
             x = randint(1, GBS.MAP_WIDTH.value - 2)

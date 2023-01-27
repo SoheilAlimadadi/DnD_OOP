@@ -14,25 +14,25 @@ class XYValidator:
     '''
     Validates the X and Y axis
     '''
-    def is_x_int(x: int, _) -> bool:
+    def is_x_int(x: int, _) -> None:
         '''Raises XAxisTypeError if x is not int'''
         if not isinstance(x, int):
             raise XAxisTypeError
 
 
-    def is_x_positive(x: int) -> bool:
+    def is_x_positive(x: int) -> None:
         '''Raises XAxisNegativeError if x is a negative number'''
         if not x >= 0:
             raise XAxisNegativeError
 
 
-    def is_y_int(y: int, _) -> bool:
+    def is_y_int(y: int, _) -> None:
         '''Raises YAxisTypeError if x is not int'''
         if not isinstance(y, int):
             raise YAxisTypeError
 
 
-    def is_y_positive(y: int) -> bool:
+    def is_y_positive(y: int) -> None:
         '''Raises YAxisNegativeError if y is a negative number'''
         if not y >= 0:
             raise YAxisNegativeError

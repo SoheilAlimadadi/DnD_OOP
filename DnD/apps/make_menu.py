@@ -23,11 +23,16 @@ class Menu:
         ]
 
 
-    def make_menu(self, username=None) -> tuple[bool, bool]:
-        '''Creates the menu'''
+    def make_menu(self, username=None) -> tuple[bool, bool, int]:
+        '''Creates the menu
+
+           return tuple[bool, bool]: is user logged-out, start game or not and
+            difficulty of the game
+        '''
         menu: bool = True
         logout: bool = False 
         start_game: bool = False
+        game_diff = 0
 
         while menu:
             Utils.clean()
@@ -40,12 +45,13 @@ class Menu:
             Utils.clean()
 
             if user_input == MB.LOGOUT:
-                menu ,logout = False, True
+                menu, logout = False, True
             if user_input in self.game_diffs:
+                game_diff = int(user_input)
                 start_game = True
                 menu = False
             if user_input == MB.LEADERBOARD:
                 leaderboard = Leaderboard()
                 leaderboard.show_leaderboard()
 
-        return logout, start_game
+        return logout, start_game, game_diff

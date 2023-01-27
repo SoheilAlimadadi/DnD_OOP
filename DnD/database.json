@@ -3,9 +3,9 @@
         "soheil": {
             "password": "6485f6ad96b0e59df96291190832e44286442a8dd17ce49236d6ac016cb178c7480af3da637e9f2af3938c3ff8b80893932935c6d0c22dbbd1b25ccb6a2553d6",
             "salt": "6485f6ad96b0e59df96291190832e44286442a8dd17ce49236d6ac016cb178c7",
-            "won": 3,
-            "lost": 6,
-            "win ratio": 33.33333333333333
+            "won": 7,
+            "lost": 12,
+            "win ratio": 36.84210526315789
         },
         "reza": {
             "password": "a5322dd57b553816e5efb7dcf1094a06ee8ab005ce4084bbc45ba22bb874e6c831261defd3f92e6afffc18fb6d693ceccb69d4eee2cd1e33792f833ecf2178d2",
@@ -27,6 +27,20 @@
             "won": 1,
             "lost": 1,
             "win ratio": 50.0
+        },
+        "behdad": {
+            "password": "a32f79cc695424f9325ac7fd8e4b8225cf321dda948f6710d4c37ea4c06bac3e4f542ab1c8847f294d65869f2a988599532cce1e735284e6af1a4c40a9770717",
+            "salt": "a32f79cc695424f9325ac7fd8e4b8225cf321dda948f6710d4c37ea4c06bac3e",
+            "won": 0,
+            "lost": 1,
+            "win ratio": 0.0
+        },
+        "ahmad": {
+            "password": "fa68b558c7d864d127f25a49f3a016a84e8ecb9f1ad68085ed7321da385acabe80e35a1306ca7d85d32c557c0a8e425ece744454295f50b12d4fe559328d0c91",
+            "salt": "fa68b558c7d864d127f25a49f3a016a84e8ecb9f1ad68085ed7321da385acabe",
+            "won": 0,
+            "lost": 1,
+            "win ratio": 0.0
         }
     }
 }
