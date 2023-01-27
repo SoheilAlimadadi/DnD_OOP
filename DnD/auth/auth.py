@@ -20,7 +20,7 @@ class PasswordAuth:
     '''
     Password validation
     '''
-    
+
     @staticmethod
     def check_pass(password: str) -> bool:
         '''

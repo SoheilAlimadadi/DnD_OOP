@@ -23,21 +23,17 @@ class BaseMonster(Movement):
         self.Y = y
         self.coord = (self.Y, self.X)
 
-    
     def random_xy(self) -> tuple[int, int]:
         """ """
         random_coord_valid = False
         while not random_coord_valid:
             x = randint(2, GBS.MAP_WIDTH.value - 2)
-            y = randint(
-                2, GBS.MAP_HEIGHT.value  - (GBS.MAP_HEIGHT.value // 3)
-            )
+            y = randint(2, GBS.MAP_HEIGHT.value - (GBS.MAP_HEIGHT.value // 3))
             if self.game_board[y][x] == GBE.MAP_TILES:
                 random_coord_valid = True
                 coord = (x, y)
 
         return coord
-
 
     def move_if_smell(self, player_coord: tuple[int, int]) -> None:
         """
@@ -45,8 +41,8 @@ class BaseMonster(Movement):
         Parameters
         ----------
         player_coord: tuple[int, int] : cooordinate of the player
-            
-        
+
+
         Returns None
         -------
 
@@ -54,7 +50,6 @@ class BaseMonster(Movement):
         if dist(self.coord, player_coord) < 5:
             direction = choice(list(self.movements.keys()))
             self.move(direction)
-
 
     def __str__(self) -> str:
         return self.string

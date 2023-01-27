@@ -41,6 +41,13 @@
             "won": 0,
             "lost": 1,
             "win ratio": 0.0
+        },
+        "Sepehr": {
+            "password": "e53368308ff40f1fe797af786758a2e185fe8c738d6d8bd0932549a1929743eb04f12653dfb17de9758bf74920143ead842932bb0f3ce23bfaad7838c662d4cc",
+            "salt": "e53368308ff40f1fe797af786758a2e185fe8c738d6d8bd0932549a1929743eb",
+            "won": 0,
+            "lost": 0,
+            "win ratio": 0
         }
     }
 }

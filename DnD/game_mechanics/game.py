@@ -13,7 +13,6 @@ class Game:
     def __init__(self, game_board: list[list[str]]):
         self.game_board: list[list[str]] = game_board
 
-
     def update_game_state(
         self,
         player_coord: tuple[int, int],
@@ -30,11 +29,11 @@ class Game:
         player_coord: tuple[int, int] : coordinate of player
 
         door_coord: tuple[int, int] : cooordinate of the door
-            
+
         hp: list[str] : a list of healths
-            
+
         monsters: list : a list of monster objects
-            
+
         shots: list[tuple[int, int] : a list of shot coordinates
 
 
@@ -57,14 +56,13 @@ class Game:
 
         return game_state, monsters
 
-
     def result(self, game_state: str) -> str:
         """Prints the result of the game and returns the game state
 
         Parameters
         ----------
         game_state: str : state of the game
-            
+
 
         Returns str: state of the game
         -------

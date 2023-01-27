@@ -25,6 +25,7 @@ class LeaderBoardVars(StrEnum):
     TABLE_STYLE: str = 'grid'
     PRESS_ANY: str = '\n\nEnter any key to go back.'
 
+
 class ValidGameInputs(StrEnum):
     UP: str = 'up'
     DOWN: str = 'down'
@@ -81,11 +82,10 @@ class PlayerShootSettings(Enum):
     LEFT_DIR = ((-1, 0), (-2, 0))
 
 
-
 class DungeonDoorSettings(StrEnum):
     DOOR_STR: str = 'dungeon door'
     EMOJI: str = '🟥'
-    
+
 
 class MovementSettings(Enum):
     UP_INPUT: str = 'up'

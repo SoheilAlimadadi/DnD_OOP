@@ -14,7 +14,7 @@ class Movement(Axis):
         MS.LEFT_INPUT.value: MS.LEFT.value,
         MS.RIGHT_INPUT.value: MS.RIGHT.value
     }
-    
+
     def __init__(
         self,
         coord: tuple[int, int],
@@ -23,14 +23,13 @@ class Movement(Axis):
         super().__init__(coord)
         self.game_board = game_board
 
-
     def move(self, user_input: str) -> None:
         """
 
         Parameters
         ----------
         user_input: str : user input
-            
+
 
         Returns None
         -------
@@ -43,10 +42,9 @@ class Movement(Axis):
             new_y = y + x_move
             self.coord = (new_x, new_y)
 
-    
     def check_wall_collision(
         self,
-        coord: tuple[int, int] ,
+        coord: tuple[int, int],
         gameboard: list[list[str]]
     ) -> bool:
         """Checks whether the object has colided with wall
@@ -56,7 +54,7 @@ class Movement(Axis):
         coord: tuple[int, int]: coordinate of object
 
         gameboard: list[list[str]] : game board
-            
+
 
         Returns bool: True if valid else False
         -------
@@ -70,11 +68,9 @@ class Movement(Axis):
 
         return valid_pos
 
-
     @property
     def coord(self) -> tuple[int, int]:
         return self._coord
-
 
     @coord.setter
     def coord(self, value: tuple[int, int]) -> None:

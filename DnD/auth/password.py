@@ -19,7 +19,6 @@ class Password:
         """get password"""
         return self._password
 
-
     @password.setter
     def password(self, value: str) -> None:
         """checks if password is valid,
@@ -49,7 +48,6 @@ class Password:
             raise PasswordLowerCaseError
 
         self._password = value
-
 
     def __str__(self) -> str:
         return self.password

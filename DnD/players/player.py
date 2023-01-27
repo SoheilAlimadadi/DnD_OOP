@@ -1,13 +1,10 @@
 from .base import BasePlayer
-from settings.settings import (
-    PlayerSettings as PS,
-    PlayerShootSettings as PSS,
-    GameBoardSize as GBS
-)
+from settings.settings import PlayerShootSettings as PSS
+
 
 class Player(BasePlayer):
     """ """
-    
+
     shoot_directions = {
         PSS.UP.value: PSS.UP_DIR.value,
         PSS.DOWN.value: PSS.DOWN_DIR.value,
@@ -15,13 +12,13 @@ class Player(BasePlayer):
         PSS.LEFT.value: PSS.LEFT_DIR.value,
     }
 
-    def shoot(self, user_input: str) -> list[tuple[int,int]]:
+    def shoot(self, user_input: str) -> list[tuple[int, int]]:
         """
 
         Parameters
         ----------
         user_input: str : user input
-            
+
 
         Returns list[tuple[int, int]]: a list of coordinate of the shots fired
         -------

@@ -5,6 +5,7 @@ from settings.settings import (
     PlayerShootSettings as PSS
 )
 
+
 class BasePlayer(Movement):
     """The base class for player"""
     def __init__(self, game_board: list[list[str]]) -> None:
@@ -18,7 +19,6 @@ class BasePlayer(Movement):
         self.X = GBS.MAP_WIDTH.value // 2
         self.Y = GBS.MAP_HEIGHT.value - 2
         self.coord: tuple[int, int] = (self.Y, self.X)
-
 
     def __str__(self) -> str:
         return self.string

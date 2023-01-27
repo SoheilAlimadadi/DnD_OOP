@@ -18,7 +18,6 @@ class Leaderboard:
         self.no_registers: str = LBV.NO_USERS
         self.style: str = LBV.TABLE_STYLE
         self.any_key: str = LBV.PRESS_ANY
-    
 
     def show_leaderboard(self) -> None:
         """Prints a table in the terminal containing the game's leaderboard"""

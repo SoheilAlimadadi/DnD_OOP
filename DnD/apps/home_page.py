@@ -20,6 +20,7 @@ class HomePage:
     The homepage of the game
     user can register, login and quit here
     """
+
     def __init__(self) -> None:
         self.database = DataBase()
         self.texts: list[str] = [HM.LOGIN_TEXT, HM.REGISTER_TEXT, HM.QUIT_TEXT]
@@ -28,7 +29,6 @@ class HomePage:
             HB.REGISTER_BUTTON,
             HB.QUIT_BUTTON
         ]
-
 
     def make_home_page(self) -> tuple[str, bool]:
         """Creates the homepage"""
@@ -56,9 +56,7 @@ class HomePage:
 
                 home_page = False
 
-
         return username, quit_game
-
 
     def register_user(self) -> None:
         """Registers the user"""
@@ -91,7 +89,6 @@ class HomePage:
             Utils.clean()
 
         self.database.register(username, password)
-
 
     def login_user(self) -> tuple[str, bool]:
         """Logs in the user
@@ -128,12 +125,10 @@ class HomePage:
 
         return username, logged_in
 
-
     def make_initial_database(self) -> None:
         """Makes the initial database"""
         if not self.database.database_exists():
             self.database.create_database()
-
 
     def validate_username(self, username: str) -> bool:
         """Calls for username validation
@@ -148,7 +143,6 @@ class HomePage:
 
         """
         return UsernameAuth.check_user(username)
-
 
     def validate_password(self, password: str) -> bool:
         """Calls for password validation

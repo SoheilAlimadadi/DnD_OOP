@@ -19,19 +19,17 @@ class GameBoard:
         self.walls: str = GBE.MAP_WALLS
         self.tiles: str = GBE.MAP_TILES
 
-
     def make_board(self) -> list[list[str]]:
         """Creates the gameboard
 
-           returns list[list[str]]: game board         
+           returns list[list[str]]: game board
         """
-        game_map = [self.walls * self.row_len 
-                    if col == 0 or col == (self.col_len - 1)
-                    else [self.walls if row == 0 or row == (self.row_len - 1)
-                    else self.tiles for row in range(self.row_len)]
-                    for col in range(self.col_len)]
+        game_map = [
+            self.walls * self.row_len if col == 0 or col == (self.col_len - 1)
+            else [self.walls if row == 0 or row == (self.row_len - 1)
+                  else self.tiles for row in range(self.row_len)]
+            for col in range(self.col_len)]
 
-        
         for col in range(2, self.col_len - 2, 3):
             if col % 2 == 0:
                 for row in range(2, self.row_len - 1):
@@ -42,7 +40,6 @@ class GameBoard:
                     game_map[col][row] = self.walls
 
         return game_map
-
 
     @staticmethod
     def place_on_board(
@@ -55,11 +52,11 @@ class GameBoard:
         Parameters
         ----------
         board: list[list[str]] : game board
-            
+
         coord: tuple[int, int] : coordinate of the object
-            
+
         obj: str : the object
-            
+
 
         Returns tuple[int, int]: coord of the object
         -------
@@ -75,7 +72,6 @@ class GameBoard:
 
         return coord
 
-
     @staticmethod
     def delete(board: list[list[str]], coord: tuple[int, int]) -> None:
         """Deletes objects from the gameboard
@@ -83,16 +79,15 @@ class GameBoard:
         Parameters
         ----------
         board: list[list[str]]: game board
-            
+
         coord: tuple[int, int] : coordinate of the object
-            
+
         Returns None
         -------
 
         """
         xpos, ypos = coord
         board[xpos][ypos] = GBE.MAP_TILES
-
 
     @staticmethod
     def draw_game_board(board: list[list[str]]) -> None:
@@ -101,7 +96,7 @@ class GameBoard:
         Parameters
         ----------
         board: list[list[str]] : game board
-            
+
 
         Returns None
         -------

@@ -19,18 +19,15 @@ class XYValidator:
         if not isinstance(x, int):
             raise XAxisTypeError
 
-
     def is_x_positive(x: int) -> None:
         '''Raises XAxisNegativeError if x is a negative number'''
         if not x >= 0:
             raise XAxisNegativeError
 
-
     def is_y_int(y: int, _) -> None:
         '''Raises YAxisTypeError if x is not int'''
         if not isinstance(y, int):
             raise YAxisTypeError
-
 
     def is_y_positive(y: int) -> None:
         '''Raises YAxisNegativeError if y is a negative number'''
@@ -43,7 +40,7 @@ class Axis(XYValidator):
     Validates and sets the Axis
     '''
     def __init__(self, coord: tuple[int, int]) -> None:
-        x, y  = coord
+        x, y = coord
         self.X = x
         self.Y = y
         self.coord = (self.Y, self.X)
@@ -51,7 +48,6 @@ class Axis(XYValidator):
     @property
     def X(self) -> int:
         return self._X
-
 
     @X.setter
     def X(self, value: int) -> None:
@@ -65,12 +61,10 @@ class Axis(XYValidator):
 
         self._X = value
 
-
     @property
     def Y(self) -> int:
         return self._Y
 
-    
     @Y.setter
     def Y(self, value: int) -> None:
         try:

@@ -20,7 +20,6 @@ class Door:
         self.game_board = game_board
         self.coord = self.random_coord()
 
-
     def random_coord(self) -> Coordinate:
         """
         Generates a semi-random location for the dungeon door
@@ -38,7 +37,6 @@ class Door:
                 coord_valid = True
 
         return coord
-
 
     def __str__(self) -> str:
         return self.string

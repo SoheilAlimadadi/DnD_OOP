@@ -4,23 +4,21 @@ from typing import Optional
 
 
 class Hash:
-
-
     """Methods regarding password hash"""
+
     @staticmethod
     def generate_salt() -> bytes:
         """Generate random salt to be used to hashing"""
         return os.urandom(32)
 
-
     @staticmethod
-    def password(password: str, salt: Optional[str]=None) -> tuple[str, str]:
+    def password(password: str, salt: Optional[str] = None) -> tuple[str, str]:
         """Hashes the password
 
         Parameters
         ----------
         password: str : password
-            
+
         salt: Optional[str] : salt for hashing
              (Default value = None)
 

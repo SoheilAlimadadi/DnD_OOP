@@ -54,7 +54,8 @@ class MenuMessages(StrEnum):
         f"Easy: {MB.EASY_DIFF}, Normal: {MB.NORMAL_DIFF}, Hard: {MB.HARD_DIFF}"
     )
     START_GAME_TEXT: str = "Enter The desired difficulty to start the game"
-    LEADERBOARD_TEXT: str = f"Enter '{MB.LEADERBOARD.upper()}' to see the leaderboard"
+    LEADERBOARD_TEXT: str = (
+        f"Enter '{MB.LEADERBOARD.upper()}' to see the leaderboard")
     LOGOUT_TEXT: str = f"Enter '{MB.LOGOUT.upper()}' to logout"
 
 
@@ -104,10 +105,12 @@ class LogMessages(StrEnum):
     LOGGED_IN = "{} Logged in"
     STARTED_GAME = "{} started the game"
     USERNAME_REGISTER = "{} is attempting to register with a valid username"
-    FAILED_USERNAME_REGISTER = "User failed to register with '{}' due to UsernameLengthError\n"
+    FAILED_USERNAME_REGISTER = (
+        "User failed to register with '{}' as username\n")
     REGISTERED = "{} registered"
     RESULT = "{} {} the game"
     EXIT_GAME = "{} came out of the game before finishing the game"
-    SHOT_WALL_TYPEERROR = "Player shot at top or bottom wall of the map TypeError"
-    SHOT_WALL_INDEXERROR = "Player shot at top or bottom wall of the map IndexError"
-    
+    SHOT_WALL_TYPEERROR = (
+        "Player shot at top or bottom wall of the map TypeError")
+    SHOT_WALL_INDEXERROR = (
+        "Player shot at top or bottom wall of the map IndexError")

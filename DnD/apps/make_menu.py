@@ -22,7 +22,6 @@ class Menu:
             MM.LOGOUT_TEXT
         ]
 
-
     def make_menu(self, username=None) -> tuple[bool, bool, int]:
         '''Creates the menu
 
@@ -30,7 +29,7 @@ class Menu:
             difficulty of the game
         '''
         menu: bool = True
-        logout: bool = False 
+        logout: bool = False
         start_game: bool = False
         game_diff = 0
 

@@ -41,8 +41,7 @@ class DungeonAndDragons:
         self.menu = Menu()
         self.game_board = GameBoard()
 
-
-    def run_pregame(self, username: str=None) -> Callable:
+    def run_pregame(self, username: str = None) -> Callable:
         """runs the homepage and menu
 
         Parameters
@@ -68,11 +67,10 @@ class DungeonAndDragons:
                 root_logger.info(LG.LOGGED_OUT.format(username))
                 username = None
                 continue
-        
+
         root_logger.info(LG.STARTED_GAME.format(username))
 
         return self.run_game(username, diff)
-
 
     def run_game(self, username: str, diff: int) -> Callable:
         """setting up the objects needed in the game
@@ -81,9 +79,9 @@ class DungeonAndDragons:
         Parameters
         ----------
         username: str : username
-            
+
         diff: int : game difficulty
-            
+
 
         Returns Callable: run_pregame method is called after run_game
         -------
@@ -100,7 +98,7 @@ class DungeonAndDragons:
             value for value in SVI.__members__.values()
         ]
         all_valid_inputs = valid_shot_inputs + valid_inputs
-        game_end, result= False, None
+        game_end, result = False, None
 
         while not game_end:
             shots = list()
@@ -126,7 +124,7 @@ class DungeonAndDragons:
             if user_input in valid_shot_inputs:
                 shots = player.shoot(user_input)
                 for shot in shots:
-                    GameBoard.place_on_board(game_board ,shot, PS.SHOTS)
+                    GameBoard.place_on_board(game_board, shot, PS.SHOTS)
             else:
                 player.move(user_input)
 
@@ -152,7 +150,6 @@ class DungeonAndDragons:
 
         return self.run_pregame(username)
 
-
     def print_info(
         self,
         valid_shoot_inputs: list[str],
@@ -164,11 +161,11 @@ class DungeonAndDragons:
         Parameters
         ----------
         valid_shoot_inputs: list[str] : valid inputs for shooting
-            
+
         valid_inputs: list[str] : valid inputs for movements
-            
+
         hp: list[str] : a list of healths
-            
+
 
         Returns None
         -------
@@ -179,7 +176,7 @@ class DungeonAndDragons:
         print(GM.SHOOT.format(" ,".join(valid_shoot_inputs)))
         print(GM.BACK.format(VGI.BACK))
 
-        
+
 if __name__ == "__main__":
     dungeon_and_dragons = DungeonAndDragons()
     dungeon_and_dragons.run_pregame()

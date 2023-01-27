@@ -12,7 +12,6 @@ class Username:
         """get username"""
         return self._username
 
-    
     @username.setter
     def username(self, value: str) -> None:
         """checks if username is valid,
@@ -21,7 +20,7 @@ class Username:
         Parameters
         ----------
         value: str : username
-            
+
 
         Returns None
         -------
@@ -30,9 +29,8 @@ class Username:
         username_validator = UsernameValidator(value)
         if not username_validator.check_username_len():
             raise UsernameLengthError
-        
-        self._username = value
 
+        self._username = value
 
     def __str__(self) -> str:
         return self.username

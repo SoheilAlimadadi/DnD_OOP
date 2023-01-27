@@ -24,6 +24,7 @@ class PasswordLetterError(WrongPasswordError):
     def __str__(self) -> str:
         return pass_esmg.PASSWORD_LETTER_ERROR
 
+
 class PasswordLowerCaseError(WrongPasswordError):
     '''Password must have atleast 1 lowercase letter'''
     def __str__(self) -> str:
@@ -82,6 +83,7 @@ class ShotAtHorizontalWallTypeError(TypeError):
     """Player shot at top or bottom wall of the map TypeError"""
     def __str__(self) -> str:
         return LM.SHOT_WALL_TYPEERROR
+
 
 class ShotAtHorizontalWallIndexError(IndexError):
     """Player shot at top or bottom wall of the map IndexError"""

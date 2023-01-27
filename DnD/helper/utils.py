@@ -1,8 +1,6 @@
 import os
 from time import sleep
 
-from helper.messages import HomepageMessages as HB
-
 
 class Utils:
 
@@ -14,13 +12,11 @@ class Utils:
         else:
             os.system('cls')
 
-
     @staticmethod
     def wait_clean() -> None:
         '''Wait 2 seconds then clear terminal'''
         sleep(2)
         Utils.clean()
-    
 
     @staticmethod
     def print_logo() -> None:

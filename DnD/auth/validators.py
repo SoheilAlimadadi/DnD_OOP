@@ -6,13 +6,13 @@ from string import (
     ascii_uppercase
 )
 
+
 class PasswordValidator:
     """
     Contains methods to check is password is valid or not.
     """
     def __init__(self, password: str) -> None:
         self.password: str = password
-
 
     def check_len(self) -> bool:
         """Checks if the length of the password is more than 8"""
@@ -22,7 +22,6 @@ class PasswordValidator:
 
         return password_is_valid
 
-
     def check_letters(self) -> bool:
         """Checks if the password contains the alphabet letters"""
         password_is_valid: bool = True
@@ -30,7 +29,6 @@ class PasswordValidator:
             password_is_valid = False
 
         return password_is_valid
-
 
     def check_digits(self) -> bool:
         """Checks if the password contains the digits"""
@@ -40,7 +38,6 @@ class PasswordValidator:
 
         return password_is_valid
 
-
     def check_signs(self) -> bool:
         """Checks if the password contains the signs"""
         password_is_valid: bool = True
@@ -49,7 +46,6 @@ class PasswordValidator:
 
         return password_is_valid
 
-
     def check_uppercase(self) -> bool:
         """Checks if the password contains the uppercase characters"""
         password_is_valid: bool = True
@@ -57,7 +53,6 @@ class PasswordValidator:
             password_is_valid = False
 
         return password_is_valid
-
 
     def check_lowercase(self) -> bool:
         """Checks if the password contains the lowercase characters"""
@@ -75,7 +70,6 @@ class UsernameValidator:
     def __init__(self, username: str) -> None:
         self.username: str = username
 
-
     def check_username_len(self) -> bool:
         """Checks if the length of the username is more than 3"""
         username_valid: bool = False
@@ -84,4 +78,3 @@ class UsernameValidator:
             username_valid = True
 
         return username_valid
-
